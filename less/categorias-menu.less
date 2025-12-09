@@ -1,0 +1,129 @@
+// categorias-menu.less
+
+.productos-hero {
+    background: @bg-light;
+    padding: @space-xxl 0;
+    text-align: center;
+
+    @media (max-width: @tablet) {
+        padding: @space-xl 0;
+    }
+
+    .productos-hero-container {
+        max-width: @container;
+        margin: 0 auto;
+        padding: 0 @space-md;
+
+        h1 {
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: @space-sm;
+            letter-spacing: -0.03em;
+
+            @media (max-width: @tablet) {
+                font-size: 36px;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            color: @secondary;
+        }
+    }
+}
+
+.categorias-menu {
+    padding: @space-xxl 0;
+
+    @media (max-width: @tablet) {
+        padding: @space-xl 0;
+    }
+
+    .categorias-menu-container {
+        max-width: @container;
+        margin: 0 auto;
+        padding: 0 @space-md;
+    }
+
+    .categorias-menu-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: @space-xl;
+
+        @media (max-width: @desktop) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: @tablet) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: @space-lg;
+        }
+
+        @media (max-width: @mobile) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: @space-md;
+        }
+    }
+}
+
+.categoria-circulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: @transition;
+
+    &:hover {
+        transform: translateY(-8px);
+
+        .categoria-circulo-img {
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+
+            img {
+                transform: scale(1.1);
+            }
+        }
+
+        h3 {
+            color: @primary;
+        }
+    }
+
+    .categoria-circulo-img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: @space-md;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        transition: @transition;
+
+        @media (max-width: @tablet) {
+            width: 150px;
+            height: 150px;
+        }
+
+        @media (max-width: @mobile) {
+            width: 120px;
+            height: 120px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: 500;
+        color: @secondary;
+        transition: @transition;
+
+        @media (max-width: @tablet) {
+            font-size: 16px;
+        }
+    }
+}

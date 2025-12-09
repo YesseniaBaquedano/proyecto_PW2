@@ -1,0 +1,135 @@
+// header.less
+
+.header {
+    background: @bg-white;
+    border-bottom: 1px solid @border;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    
+    .header-container {
+        max-width: @container;
+        margin: 0 auto;
+        padding: 0 @space-md;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        gap: @space-xxl;
+
+        @media (max-width: @tablet) {
+            justify-content: space-between;
+            gap: 0;
+        }
+    }
+
+    .logo {
+        margin-right: @space-xxl;
+        
+        h1 {
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+
+            span {
+                font-weight: 300;
+            }
+        }
+
+        @media (max-width: @tablet) {
+            margin-right: 0;
+        }
+    }
+
+    .mobile-btn {
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        background: none;
+        padding: @space-xs;
+
+        @media (max-width: @tablet) {
+            display: flex;
+        }
+
+        span {
+            width: 20px;
+            height: 2px;
+            background: @primary;
+            transition: @transition;
+        }
+
+        &.active {
+            span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            span:nth-child(2) {
+                opacity: 0;
+            }
+            span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+        }
+    }
+
+    .nav {
+        @media (max-width: @tablet) {
+            position: fixed;
+            top: 70px;
+            right: -100%;
+            width: 280px;
+            height: calc(100vh - 70px);
+            background: @bg-white;
+            border-left: 1px solid @border;
+            transition: @transition;
+            overflow-y: auto;
+
+            &.active {
+                right: 0;
+            }
+        }
+    }
+
+    .menu {
+        display: flex;
+        gap: @space-md;
+        list-style: none;
+
+        @media (max-width: @tablet) {
+            flex-direction: column;
+            padding: @space-lg;
+            gap: 0;
+        }
+
+        li a {
+            font-size: 13px;
+            font-weight: 500;
+            color: @secondary;
+            transition: @transition;
+            position: relative;
+
+            @media (max-width: @tablet) {
+                display: block;
+                padding: @space-sm 0;
+                font-size: 16px;
+                border-bottom: 1px solid @border;
+            }
+
+            &:hover,
+            &.active {
+                color: @primary;
+            }
+
+            &.active::after {
+                @media (min-width: @tablet) {
+                    content: '';
+                    position: absolute;
+                    bottom: -25px;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background: @primary;
+                }
+            }
+        }
+    }
+}

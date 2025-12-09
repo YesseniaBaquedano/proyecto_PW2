@@ -1,0 +1,77 @@
+// heropanel.less
+
+.hero {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: @tablet) {
+        height: 400px;
+    }
+
+    .hero-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        color: @bg-white;
+        padding: 0 @space-md;
+        max-width: 800px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 1;
+    }
+
+    .hero-title {
+        font-size: 64px;
+        font-weight: 600;
+        margin-bottom: @space-sm;
+        letter-spacing: -0.03em;
+
+        @media (max-width: @tablet) {
+            font-size: 40px;
+        }
+    }
+
+    .hero-subtitle {
+        font-size: 20px;
+        font-weight: 300;
+        margin-bottom: @space-lg;
+        opacity: 0.9;
+
+        @media (max-width: @tablet) {
+            font-size: 16px;
+        }
+    }
+
+    .hero-btn {
+        display: inline-block;
+        padding: @space-sm @space-xl;
+        background: @bg-white;
+        color: @primary;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        transition: @transition;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+    }
+}

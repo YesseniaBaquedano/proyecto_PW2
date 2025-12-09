@@ -1,0 +1,38 @@
+<section class="catalogo-hero">
+    <div class="catalogo-hero-container">
+        <h1>Vestidos</h1>
+        <p>Encuentra el vestido perfecto para cada ocasión</p>
+    </div>
+</section>
+
+<section class="catalogo">
+    <div class="catalogo-container">
+        <div class="catalogo-grid" id="vestidosGrid">
+            {{#each vestidos}}
+            <div class="catalogo-card">
+                <div class="catalogo-card-image">
+                    <img src="{{this.imagen}}" alt="{{this.nombre}}">
+                    {{#if this.nuevo}}
+                    <span class="catalogo-badge">Nuevo</span>
+                    {{/if}}
+                    {{#if this.descuento}}
+                    <span class="catalogo-badge catalogo-badge-sale">-{{this.descuento}}%</span>
+                    {{/if}}
+                </div>
+                <div class="catalogo-card-info">
+                    <h3>{{this.nombre}}</h3>
+                    <div class="catalogo-card-price">
+                        ${{this.precio}}
+                        {{#if this.descuento}}
+                        <span class="catalogo-card-old-price">${{this.precio}}</span>
+                        {{/if}}
+                    </div>
+                    <button class="catalogo-card-btn" data-id="{{this.id}}">
+                        Agregar al carrito
+                    </button>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>
