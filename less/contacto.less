@@ -1,0 +1,86 @@
+.contact-section {
+    max-width: @container;
+    margin: @space-xxl auto;
+    padding: 0 @space-md;
+
+    h2 {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: @space-lg;
+        color: @primary;
+    }
+}
+
+.contact-form {
+    background: @bg-white;
+    padding: @space-xl;
+    border: 1px solid @border;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: @space-md;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+
+    @media (max-width: @tablet) {
+        padding: @space-lg;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: @space-xs;
+
+        label {
+            font-size: 14px;
+            font-weight: 500;
+            color: @secondary;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: @space-sm;
+            border: 1px solid @border;
+            border-radius: 6px;
+            font-family: inherit;
+            transition: @transition;
+
+            &:focus {
+                border-color: @primary;
+                box-shadow: 0 0 0 2px fade(@primary, 20%);
+                outline: none;
+            }
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+    }
+
+    .btn-enviar {
+        background: @primary;
+        color: #fff;
+        border: none;
+        padding: @space-sm;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: @transition;
+        width: 150px;
+
+        &:hover {
+            background: darken(@primary, 8%);
+        }
+    }
+}
+
+
+// Importar componentes
+@import 'header.less';
+@import 'footer.less';
+@import 'hero.less';
+@import 'productos.less';
+@import 'categorias-menu.less';
+@import 'vestidos-catalogo.less';
