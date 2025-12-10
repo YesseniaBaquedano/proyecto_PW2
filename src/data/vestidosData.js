@@ -1,18 +1,16 @@
-// vestidosData.js
-
 export const vestidosData = [
     {
         id: 1,
         nombre: "Vestido Floral de Verano",
-        precio: 89.99,
-        imagen: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&q=80",
+        precio: 450.00,
+        imagen: "/img/vestido-floral.jpg",
         nuevo: true
     },
     {
         id: 2,
         nombre: "Vestido Negro Elegante",
-        precio: 129.99,
-        imagen: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=400&q=80",
+        precio: 950.00,
+        imagen: "/img/vestido-negro-elegante.jpg",
         descuento: 20
     },
     {
