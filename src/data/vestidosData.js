@@ -16,85 +16,65 @@ export const vestidosData = [
     {
         id: 3,
         nombre: "Vestido Midi Casual",
-        precio: 69.99,
-        imagen: "https://images.unsplash.com/photo-1612336307429-8a898d10e223?w=400&q=80"
+        precio: 550,
+        imagen: "/img/vestido-midi.jpg"
     },
     {
         id: 4,
         nombre: "Vestido Largo de Noche",
-        precio: 159.99,
-        imagen: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=400&q=80",
+        precio: 1000.00,
+        imagen: "/img/vestido-largo-noche.jpg",
         nuevo: true
     },
     {
         id: 5,
         nombre: "Vestido Corto de Fiesta",
-        precio: 99.99,
-        imagen: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=400&q=80"
+        precio: 900.00,
+        imagen: "/img/vestido-corto-fiesta.jpg"
     },
     {
         id: 6,
         nombre: "Vestido Estampado Vintage",
-        precio: 79.99,
-        imagen: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&q=80",
+        precio: 650.00,
+        imagen: "/img/vestido-estampado.jpg",
         descuento: 15
     },
     {
         id: 7,
         nombre: "Vestido Blanco de Playa",
-        precio: 59.99,
-        imagen: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&q=80"
+        precio: 450.00,
+        imagen: "/img/vestido-playa.jpg"
     },
     {
         id: 8,
         nombre: "Vestido Rojo Cocktail",
-        precio: 119.99,
-        imagen: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=400&q=80",
+        precio: 500.00,
+        imagen: "/img/vestido-rojo.jpg",
         nuevo: true
     },
     {
         id: 9,
         nombre: "Vestido Bohemio Maxi",
-        precio: 94.99,
-        imagen: "https://images.unsplash.com/photo-1617019114583-affb34d1b3cd?w=400&q=80"
+        precio: 750.00,
+        imagen: "/img/vestido-bohemio.jpg"
     },
     {
         id: 10,
         nombre: "Vestido Azul Marino",
-        precio: 84.99,
-        imagen: "https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?w=400&q=80"
+        precio: 580.00,
+        imagen: "/img/azul-marino.jpg"
     },
     {
         id: 11,
         nombre: "Vestido Verde Esmeralda",
-        precio: 139.99,
-        imagen: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&q=80",
+        precio: 600.00,
+        imagen: "/img/verde-esmeralda.jpg",
         descuento: 25
     },
     {
         id: 12,
         nombre: "Vestido Wrap Estampado",
-        precio: 74.99,
-        imagen: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&q=80"
-    },
-    {
-        id: 13,
-        nombre: "Vestido Rosa Pastel",
-        precio: 89.99,
-        imagen: "https://images.unsplash.com/photo-1612336307429-8a898d10e223?w=400&q=80",
-        nuevo: true
-    },
-    {
-        id: 14,
-        nombre: "Vestido Off Shoulder",
-        precio: 109.99,
-        imagen: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=400&q=80"
-    },
-    {
-        id: 15,
-        nombre: "Vestido Lino Natural",
-        precio: 64.99,
-        imagen: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&q=80",
-        descuento: 10
+        precio: 350.00,
+        imagen: "/img/vestido-wrap.jpg"
     }
 ];

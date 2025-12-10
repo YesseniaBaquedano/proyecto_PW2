@@ -22,9 +22,9 @@
                 <div class="catalogo-card-info">
                     <h3>{{this.nombre}}</h3>
                     <div class="catalogo-card-price">
-                        ${{this.precio}}
+                        L{{this.precio}}
                         {{#if this.descuento}}
-                        <span class="catalogo-card-old-price">${{this.precio}}</span>
+                        <span class="catalogo-card-old-price">L{{this.precio}}</span>
                         {{/if}}
                     </div>
                     <button class="catalogo-card-btn" data-id="{{this.id}}">
