@@ -1,0 +1,150 @@
+
+@primary-color: #ff6f61;
+@secondary-color: #333;
+@background-color: #f9f9f9;
+@card-background: #fff;
+@border-radius: 10px;
+@font-family: 'Inter', sans-serif;
+@transition: 0.3s ease;
+
+
+body {
+  font-family: @font-family;
+  background-color: @background-color;
+  color: @secondary-color;
+  margin: 0;
+  padding: 0;
+}
+
+
+.envios {
+  padding: 4rem 2rem;
+
+  .envios-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: @primary-color;
+      margin-bottom: 2rem;
+    }
+
+    .envios-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .envio {
+      background-color: @card-background;
+      border-radius: @border-radius;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform @transition, box-shadow @transition;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+      }
+
+      .envio-image {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        background-color: lighten(@card-background, 5%);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.6s ease;
+        }
+
+        &:hover img {
+          transform: scale(1.05);
+        }
+
+        .envio-badge {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          background-color: @primary-color;
+          color: #fff;
+          padding: 4px 10px;
+          font-size: 12px;
+          font-weight: 600;
+          text-transform: uppercase;
+          border-radius: 5px;
+
+          &.envio-badge-express {
+            background-color: #3498db;
+          }
+
+          &.envio-badge-international {
+            background-color: #9b59b6;
+          }
+
+          &.envio-badge-store {
+            background-color: #2ecc71;
+          }
+        }
+      }
+
+      .envio-info {
+        padding: 1rem;
+
+        h3 {
+          font-size: 1.1rem;
+          color: @secondary-color;
+          margin-bottom: 0.5rem;
+        }
+
+        .envio-detail {
+          font-size: 0.9rem;
+          color: darken(@secondary-color, 20%);
+          margin-bottom: 0.5rem;
+        }
+
+        .envio-price {
+          font-size: 1rem;
+          font-weight: 600;
+          margin-bottom: 0.75rem;
+        }
+
+        .envio-btn {
+          width: 100%;
+          padding: 0.5rem 0;
+          background-color: @primary-color;
+          color: #fff;
+          font-size: 0.9rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color @transition;
+
+          &:hover {
+            background-color: darken(@primary-color, 10%);
+          }
+        }
+      }
+    }
+  }
+}
+
