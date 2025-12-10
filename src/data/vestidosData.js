@@ -10,13 +10,14 @@ export const vestidosData = [
         id: 2,
         nombre: "Vestido Negro Elegante",
         precio: 950.00,
+        precioOferta: 760.00, // 20% menos
         imagen: "/img/vestido-negro-elegante.jpg",
         descuento: 20
     },
     {
         id: 3,
         nombre: "Vestido Midi Casual",
-        precio: 550,
+        precio: 550.00,
         imagen: "/img/vestido-midi.jpg"
     },
     {
@@ -36,6 +37,7 @@ export const vestidosData = [
         id: 6,
         nombre: "Vestido Estampado Vintage",
         precio: 650.00,
+        precioOferta: 552.50, // 15% menos
         imagen: "/img/vestido-estampado.jpg",
         descuento: 15
     },
@@ -68,6 +70,7 @@ export const vestidosData = [
         id: 11,
         nombre: "Vestido Verde Esmeralda",
         precio: 600.00,
+        precioOferta: 450.00, // 25% menos
         imagen: "/img/verde-esmeralda.jpg",
         descuento: 25
     },

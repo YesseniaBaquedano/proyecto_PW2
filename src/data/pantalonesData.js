@@ -10,6 +10,7 @@ export const pantalonesData = [
         id: 2,
         nombre: "Pantalón Beige",
         precio: 700.00,
+        precioOferta: 595.00, // 15% menos
         imagen: "/img/pantalon-beige.webp",
         descuento: 15
     },
@@ -36,6 +37,7 @@ export const pantalonesData = [
         id: 6,
         nombre: "Pantalón Formal Negro",
         precio: 850.00,
+        precioOferta: 680.00, // 20% menos
         imagen: "/img/formal-negro.webp",
         descuento: 20
     },

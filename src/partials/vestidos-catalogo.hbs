@@ -12,21 +12,28 @@
             <div class="catalogo-card">
                 <div class="catalogo-card-image">
                     <img src="{{this.imagen}}" alt="{{this.nombre}}">
+                    
                     {{#if this.nuevo}}
                     <span class="catalogo-badge">Nuevo</span>
                     {{/if}}
+                    
                     {{#if this.descuento}}
                     <span class="catalogo-badge catalogo-badge-sale">-{{this.descuento}}%</span>
                     {{/if}}
                 </div>
+
                 <div class="catalogo-card-info">
                     <h3>{{this.nombre}}</h3>
+
                     <div class="catalogo-card-price">
-                        L{{this.precio}}
-                        {{#if this.descuento}}
-                        <span class="catalogo-card-old-price">${{this.precio}}</span>
+                        {{#if this.precioOferta}}
+                            L{{this.precioOferta}}
+                            <span class="catalogo-card-old-price">L{{this.precio}}</span>
+                        {{else}}
+                            L{{this.precio}}
                         {{/if}}
                     </div>
+
                     <button class="catalogo-card-btn" data-id="{{this.id}}">
                         Agregar al carrito
                     </button>

@@ -10,6 +10,7 @@ export const zapatosData = [
         id: 2,
         nombre: "Zapatos Oxford Negros",
         precio: 850.00,
+        precioOferta: 722.50, // 15% de descuento
         imagen: "/img/oxford.webp",
         descuento: 15
     },
@@ -36,6 +37,7 @@ export const zapatosData = [
         id: 6,
         nombre: "Mocasines Casual Beige",
         precio: 1000.00,
+        precioOferta: 800.00, // 20% de descuento
         imagen: "/img/mocasines.webp",
         descuento: 20
     },

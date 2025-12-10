@@ -10,6 +10,7 @@ export const camisasData = [
         id: 2,
         nombre: "Camisa Azul Oxford",
         precio: 400.00,
+        precioOferta: 340.00, // 15% menos
         imagen: "/img/azul-oxford.webp",
         descuento: 15
     },
@@ -36,6 +37,7 @@ export const camisasData = [
         id: 6,
         nombre: "Camisa Negra Formal",
         precio: 425.00,
+        precioOferta: 340.00, // 20% menos
         imagen: "/img/camisa-negra.jpg",
         descuento: 20
     },

@@ -1,39 +1,29 @@
 <section class="catalogo-hero">
     <div class="catalogo-hero-container">
-        <h1>Zapatos</h1>
-        <p>Descubre nuestra colección de calzado para cada estilo</p>
+        <h1>Ofertas</h1>
+        <p>Encuentra nuestros productos en descuento y aprovecha las mejores promociones</p>
     </div>
 </section>
 
 <section class="catalogo">
     <div class="catalogo-container">
-        <div class="catalogo-grid" id="zapatosGrid">
-            {{#each zapatos}}
+        <div class="catalogo-grid" id="ofertasGrid">
+            {{#each ofertas}}
             <div class="catalogo-card">
                 <div class="catalogo-card-image">
                     <img src="{{this.imagen}}" alt="{{this.nombre}}">
-
-                    {{#if this.nuevo}}
-                    <span class="catalogo-badge">Nuevo</span>
-                    {{/if}}
-
                     {{#if this.descuento}}
                     <span class="catalogo-badge catalogo-badge-sale">-{{this.descuento}}%</span>
                     {{/if}}
                 </div>
-
                 <div class="catalogo-card-info">
                     <h3>{{this.nombre}}</h3>
-
                     <div class="catalogo-card-price">
-                        {{#if this.precioOferta}}
-                            L{{this.precioOferta}}
-                            <span class="catalogo-card-old-price">L{{this.precio}}</span>
-                        {{else}}
-                            L{{this.precio}}
+                        L{{this.precioOferta}}
+                        {{#if this.descuento}}
+                        <span class="catalogo-card-old-price">L{{this.precio}}</span>
                         {{/if}}
                     </div>
-
                     <button class="catalogo-card-btn" data-id="{{this.id}}">
                         Agregar al carrito
                     </button>
