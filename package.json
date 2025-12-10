@@ -15,7 +15,21 @@
   },
   "dependencies": {
     "glob": "^11.0.3",
+    "handlebars": "^4.7.8",
     "vite-plugin-minify": "^2.1.0",
     "vite-plugin-purgecss": "^0.2.13"
-  }
+  },
+  "description": "",
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YesseniaBaquedano/proyecto_PW2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YesseniaBaquedano/proyecto_PW2/issues"
+  },
+  "homepage": "https://github.com/YesseniaBaquedano/proyecto_PW2#readme"
 }
