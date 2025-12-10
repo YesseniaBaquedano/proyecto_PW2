@@ -1,0 +1,19 @@
+<section class="blog-tips">
+  <div class="blog-tips-container">
+    <h1>Tips de Moda</h1>
+    <p>Descubre consejos prácticos y fáciles de aplicar para mejorar tu estilo y sacar el máximo provecho a tu guardarropa.</p>
+    <p>Aprende a combinar prendas, elegir accesorios y mantener tu ropa como nueva para lucir siempre a la moda, sin complicaciones.</p>
+    <div class="blog-tips-grid">
+      {{#each tips}}
+        <div class="tip-card">
+          <h3>{{this.titulo}}</h3>
+          <p>{{this.contenido}}</p>
+          {{#if this.nuevo}}
+            <span class="tip-badge">Nuevo</span>
+          {{/if}}
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
+

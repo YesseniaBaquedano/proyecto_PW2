@@ -1,0 +1,75 @@
+.blog-tips {
+  padding: @space-xxl 0;
+
+  .blog-tips-container {
+    max-width: @container;
+    margin: 0 auto;
+    padding: 0 @space-md;
+    text-align: center; // Solo centramos el título y encabezado, no los tips
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: @space-sm;
+      color: @primary;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: @secondary;
+      line-height: 1.6;
+      margin-bottom: @space-md;
+
+      &:nth-of-type(2) {
+        font-style: italic;
+        color: darken(@secondary, 10%);
+      }
+    }
+  }
+
+  .blog-tips-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: @space-lg;
+    margin-top: @space-lg;
+
+    @media (max-width: @tablet) {
+      grid-template-columns: 1fr;
+    }
+
+    .tip-card {
+      background: @bg-white;
+      padding: @space-md;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      text-align: left; // Aquí alineamos el contenido a la izquierda
+
+      &:hover {
+        transform: translateY(-3px);
+      }
+
+      h3 {
+        font-size: 1.25rem;
+        margin-bottom: @space-xs;
+      }
+
+      p {
+        font-size: 1rem;
+        color: @secondary;
+      }
+
+      .tip-badge {
+        display: inline-block;
+        margin-top: @space-xs;
+        padding: 2px 8px;
+        background: @accent;
+        color: @bg-white;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-radius: 4px;
+      }
+    }
+  }
+}

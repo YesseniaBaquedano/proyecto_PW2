@@ -3,6 +3,7 @@ import { camisasData } from "./camisasData";
 import { pantalonesData } from "./pantalonesData";
 import { zapatosData } from "./zapatosData";
 import { ofertasData } from "./ofertasData";
+import { tipsData } from "./tipsData";
 
 export const getData = (page) => {
     console.log("Getting Context Data for page", page);
@@ -32,7 +33,10 @@ export const getData = (page) => {
     if (page.includes('ofertas')) {
         contextData.ofertas = ofertasData;
     }
-    
+
+    if (page.includes('blog')) {
+        contextData.tips = tipsData;
+    }
     return contextData;
 }
 
