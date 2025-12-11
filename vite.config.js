@@ -34,7 +34,7 @@ function obtenerEntradas(){
 export default defineConfig(
     {
         appType: 'mpa',
-        base: '/proyecto_PW2/' ,
+        base: '/proyecto_PW2/',
         build: {
             minify: true,
             rollupOptions: {
